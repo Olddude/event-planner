@@ -14,7 +14,7 @@
 
 variable "project_name" {
   type        = string
-  description = "Project name used as a base for resource naming"
+  description = "Project name used as a base for resource naming."
   default     = "event-planner"
 }
 
