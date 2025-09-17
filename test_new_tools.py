@@ -8,11 +8,17 @@ sys.path.insert(0, 'app')
 from dotenv import load_dotenv
 load_dotenv()
 
-from agent import get_travel_guide, get_events, get_attractions, get_weather
+from agent import get_travel_guide, get_events, get_attractions, get_weather, get_current_time
 
 def test_weather():
     print("Testing get_weather for 'Berlin' (requires OPENWEATHER_API_KEY):")
     result = get_weather("Berlin")
+    print(result)
+    print()
+
+def test_current_time():
+    print("Testing get_current_time for 'New York':")
+    result = get_current_time("New York")
     print(result)
     print()
 
@@ -36,6 +42,7 @@ def test_attractions():
 
 if __name__ == "__main__":
     test_weather()
+    test_current_time()
     test_travel_guide()
     test_events()
     test_attractions()
